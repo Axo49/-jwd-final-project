@@ -18,14 +18,23 @@ body {
 
 .todobtn {
     background-color: #ec77ab;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
 }
 
 .doingbtn {
     background-color: #9b6ecb;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
 }
 
 .donebtn {
     background-color: #7873f5;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
 }
 
 .paddingZero {
