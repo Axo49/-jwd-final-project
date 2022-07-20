@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/313c78f7c4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style2.css">
     <title>To do List</title>
 </head>
@@ -16,7 +19,7 @@
     <div class="container-fluid">
         <!-- This is to do left -->
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 function-bar">
                 <div class="input-group">
                     <input type="text" class="form-control" aria-label="Text input with dropdown button">
                     <div class="input-group-append">
@@ -89,7 +92,6 @@
                                 <!-- Date -->
                                 <input type="date" class="form-control" id="date" name="date"><br>
                                 <!-- Priority button-->
-                                <div>
                                     <select class="form-select" aria-label="Priority">
                                         <option selected>Priority</option>
                                         <option value="1">High</option>
@@ -107,16 +109,12 @@
                                     </div>
                                 </div>
                                   <!-- status button -->
-                                <div>
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Status
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="status">
-                                        <a class="dropdown-item" href="#">ToDo</a>
-                                        <a class="dropdown-item" href="#">Doing</a>
-                                        <a class="dropdown-item" href="#">Done</a>
-                                    </div>
-                                </div>
+                                  <select class="form-select" aria-label="">
+                                    <option selected>Status</option>
+                                    <option value="1">To Do</option>
+                                    <option value="2">Doing</option>
+                                    <option value="3">Done</option>  
+                                  </select>
                             </div>
                         </form>
                         <!-- Add task button -->
