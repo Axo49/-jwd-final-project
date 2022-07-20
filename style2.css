@@ -1,7 +1,59 @@
 
 
-.body {
+body {
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+.function-bar {
     background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
     background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
     background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+}
+
+.navbar {
+    background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+}
+
+.todobtn {
+    background-color: #ec77ab;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+}
+
+.doingbtn {
+    background-color: #9b6ecb;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+}
+
+.donebtn {
+    background-color: #7873f5;
+    width: 150px !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+}
+
+.paddingZero {
+    padding: 0 !important;
+}
+
+.fixHeight {
+    height: 100vh;
+}
+
+.leftColSearch {
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
+}
+
+.projectListName {
+    padding: 15px !important;
+}
+
+.project-list .list-group-flush {
+    padding: 15px !important;
 }

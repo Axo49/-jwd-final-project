@@ -27,163 +27,122 @@
 
   <body>
     <div class="container-fluid">
-      <!-- This is to do left -->
-      <div class="row">
-        <div class="col-md-2 function-bar">
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Text input with dropdown button"
-            />
-            <div class="input-group-append">
-              <button
-                class="btn btn-outline-secondary dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fa-solid fa-bars"></i>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <h3>Project List</h3>
-            <button type="button" class="btn">
-              <i class="fa-solid fa-circle-plus"></i>
-            </button>
-          </div>
-          <div class="project-list">
-            <ul class="list-group-flush">
-              <li class="list-group-item">
-                Cras justo odio<i class="fa-solid fa-star"
-                  ><i class="fa-solid fa-circle-minus"></i
-                ></i>
-              </li>
-              <li class="list-group-item">
-                Dapibus ac facilisis in<i class="fa-regular fa-star"
-                  ><i class="fa-solid fa-circle-minus"></i
-                ></i>
-              </li>
-              <li class="list-group-item">Morbi leo risus</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-10">
-          <!-- This is nav bar -->
-          <div class="row">
-            <div class="col-md-12">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <!-- Company Name & Icon -->
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- The right nav bar items -->
-                <form class="form-inline my-2 my-lg-0 d-flex ml-auto">
-                  <input
-                    class="form-control mr-sm-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button
-                    class="btn btn-outline-success my-2 my-sm-0"
-                    type="submit"
-                  >
-                    New Project
-                  </button>
-                  <button class="btn my-2 my-sm-0" type="submit">
-                    <i class="fa-solid fa-user"></i>
-                  </button>
-                  <button class="btn my-2 my-sm-0" type="submit">
-                    <i class="fa-solid fa-bell"></i>
-                  </button>
-                </form>
-              </nav>
-            </div>
-          </div>
-          <!-- This is pj name -->
-          <div class="row">
-            <div class="col-md-12">
-              <h1>Project Name</h1>
-              <div class="d-flex justify-content-around filterButt">
-                <button type="button" class="btn btn-primary">ToDo</button>
-                <button type="button" class="btn btn-primary">Doing</button>
-                <button type="button" class="btn btn-primary">Done</button>
-              </div>
-            </div>
-          </div>
-          <!-- This is Task -->
-          <div class="row">
-            <div class="col-md-12">
-              <form class="border border-dark">
-                <div class="d-flex justify-content-between">
-                  <label class="d-flex" for="taskName">Task Name</label><br />
-                  <label for="endDate">End Date</label><br />
-                  <label for="priority">Priority</label><br />
-                  <label for="assigness">assigness</label><br />
-                  <label for="more">More</label><br />
-                  <label for="status">Status</label><br />
-                </div>
-                <div class="d-flex statusParent">
-                  <!-- Task content -->
-                  <input
-                    class="mr-auto"
-                    type="text"
-                    id="Task"
-                    name="Task Name"
-                  /><br />
-                  <!-- Date -->
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="date"
-                    name="date"
-                  /><br />
-                  <!-- Priority button-->
-                  <select class="form-select" aria-label="Priority">
-                    <option value="high" selected>High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                  </select>
-                  <!-- more button -->
-                  <div>
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="more"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      More
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="more">
-                      <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
+        <!-- This is to do left -->
+        <div class="row">
+            <div class="col-md-2 function-bar overflow-auto fixHeight">
+                <div class="input-group leftColSearch">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
                     </div>
+                </div>
+                  <div class="row projectListName">
+                      <h3>Project List</h3>
+                      <button type="button" class="btn"><i class="fa-solid fa-circle-plus"></i></button>
                   </div>
-                  <!-- status button -->
-                  <div class="dropdown changeVal">
+                  <!-- Project-list Item -->
+                  <div class="project-list">
+                    <ul class="list-group-flush ">
+                        <li class="list-group-item d-flex">Working
+                            <button class="btn"><i class="fa-solid fa-star"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button></li>
+                        <li class="list-group-item">School
+                            <button class="btn"><i class="fa-regular fa-star"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button></li>
+                      </ul>
+                  </div>
+            </div>
+            <div class="col-md-10">
+                <!-- This is nav bar -->
+                <div class="row">
+                    <div class="col-md-12 paddingZero ">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                            <!-- Company Name & Icon -->
+                            <a class="navbar-brand" href="#">
+                                <i class="fa-solid fa-user-graduate fa-2xl"></i>To-Do-List</a>
+                            <!-- The right nav bar items -->
+                              <form class="form-inline my-2 my-lg-0 d-flex ml-auto">
+                                  <!-- search  -->
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="search">
+                                <!-- add new project button -->
+                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                                    <span><i class="fa-solid fa-plus "></i></span></i>New Project</button>
+                                <!-- user button -->
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-user fa-xl"></i></button>
+                                <!-- alarm button -->
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-bell fa-xl"></i></button>
+                              </form>
+                          </nav>
+                    </div>
+                </div>
+                <!-- This is pj name -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Project Name</h1>
+                        <!-- The Todo doing done button -->
+                        <div class="row d-flex">
+                            <!-- to do btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg todobtn d-flex center ">To Do</button>
+                            </div>
+                            <!-- doing btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg doingbtn center">Doning</button>
+                            </div>
+                            <!-- done btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg donebtn center">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is Task -->
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <form class="border border-dark">
+                            <div class="d-flex justify-content-between">
+                                <label class="d-flex " for="taskName">Task Name</label><br>
+                                <label for="endDate">End Date</label><br>
+                                <label for="priority">Priority</label><br>
+                                <label for="assigness">Assigness</label><br>
+                                <label for="more">More</label><br>
+                                <label for="status">Status</label><br>
+                            </div>
+                            <div class="d-flex overflow-auto">
+                                <!-- Task content -->
+                                <input class="mr-auto" type="text" id="task" name="taskName"><br>
+                                <!-- Date -->
+                                <input type="date" class="form-control" id="date" name="date"><br>
+                                <!-- Priority button-->
+                                    <select class="form-control selectpicker" aria-label="Priority">
+                                        <option selected >Priority</option>
+                                        <option value="1" >High</option>
+                                        <option value="2" >Medium</option>
+                                        <option value="3" >Low</option>  
+                                      </select>
+                                <!-- assigness -->
+                                <button class="btn"><i class="fa-solid fa-users fa-2xl"></i></button>
+                                <!-- more button -->
+                                <div>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    More
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="more">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delet</a>
+                                    </div>
+                                </div>
+                                <!-- status button -->
+<div class="dropdown changeVal">
                     <button
                       class="btn btn-secondary dropdown-toggle diffValue"
                       type="button"
-                      id="dropdownMenuButton"
+                      id="more1"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
@@ -192,11 +151,17 @@
                     </button>
                     <div
                       class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
+                      aria-labelledby="more1"
                     >
                       <a class="dropdown-item" href="#">todo</a>
                       <a class="dropdown-item" href="#">doing</a>
                       <a class="dropdown-item" href="#">done</a>
+                            </div>
+                        </form>
+                        <!-- Add task button -->
+                        <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
+                        </div>
                     </div>
                   </div>
                 </div>
