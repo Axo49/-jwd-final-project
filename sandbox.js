@@ -1,7 +1,18 @@
-const statusValue = Array.from(document.querySelectorAll(".status"));
 const filterButton = document.querySelector(".filterButt");
+const changeValue = document.querySelector(".changeVal");
+const diffValue = document.querySelector(".diffValue");
 
-console.log(statusValue);
+changeValue.addEventListener("click", (e) => {
+  if (e.target.innerText.toLowerCase() === "todo") {
+    diffValue.innerText = "todo";
+  } else if (e.target.innerText.toLowerCase() === "doing") {
+    diffValue.innerText = "doing";
+  } else if (e.target.innerText.toLowerCase() === "done") {
+    diffValue.innerText = "done";
+  }
+});
+
+/* console.log(statusValue);
 filterButton.addEventListener("click", (e) => {
   const notMatchArr = statusValue.filter((item) => {
     console.log(item.hasAttribute("selected"));
@@ -28,13 +39,10 @@ filterButton.addEventListener("click", (e) => {
     );
   });
   MatchArr.forEach((value) => {
-    value.parentElement.parentElement.setAttribute(
-      "style",
-      "display:inline !important"
-    );
+    value.parentElement.parentElement.removeAttribute("style");
   });
   console.log(notMatchArr, MatchArr[0].innerText, MatchArr[1].innerText);
-});
+}); */
 
 /*   for (let i = 0; i < statusValue.length; i++) {
     console.log(e.target.innerText.toLowerCase(), statusValue[i].value);
