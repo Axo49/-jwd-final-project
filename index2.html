@@ -82,11 +82,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Project Name</h1>
+                        <i class="fa-solid fa-xmark showStatus clearButton"></i>
                         <!-- The Todo doing done button -->
                         <div class="row d-flex filterButt">
                             <!-- to do btn -->
                             <div class="col-md-4 d-flex justify-content-center">
-                                <button type="button" class="btn btn-lg todobtn d-flex center ">To Do</button>
+                                <button type="button" class="btn btn-lg todobtn d-flex center">ToDo</button>
                             </div>
                             <!-- doing btn -->
                             <div class="col-md-4 d-flex justify-content-center">
@@ -138,16 +139,51 @@
                                 </div>
                                 <!-- status button -->
                                 <div class=" changeVal">
-                                    <button class="btn btn-secondary dropdown-toggle diffValue" type="button" id="more1"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Status
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="more1">
+                                    <button class="btn btn-secondary dropdown-toggle diffValue" type="button" id="status"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
+                                    <div class="dropdown-menu" aria-labelledby="status">
                                         <a class="dropdown-item" href="#">ToDo</a>
                                         <a class="dropdown-item" href="#">Doing</a>
                                         <a class="dropdown-item" href="#">Done</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="d-flex overflow-auto">
+                                <!-- Task content -->
+                                <input class="mr-auto" type="text" id="task" name="taskName"><br>
+                                <!-- Date -->
+                                <input type="date" class="form-control" id="date" name="date"><br>
+                                <!-- Priority button-->
+                                <select class="form-control selectpicker" aria-label="Priority">
+                                    <option selected>Priority</option>
+                                    <option value="1">High</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">Low</option>
+                                </select>
+                                <!-- assigness -->
+                                <button class="btn"><i class="fa-solid fa-users fa-2xl"></i></button>
+                                <!-- more button -->
+                                <div>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="more"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        More
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="more">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                    </div>
+                                </div>
+                                <!-- status button -->
+                                <div class=" changeVal">
+                                    <button class="btn btn-secondary dropdown-toggle diffValue" type="button" id="status"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
+                                    <div class="dropdown-menu" aria-labelledby="status">
+                                        <a class="dropdown-item" href="#">ToDo</a>
+                                        <a class="dropdown-item" href="#">Doing</a>
+                                        <a class="dropdown-item" href="#">Done</a>
+                                    </div>
+                                </div>
+                            </div>                            
                         </form>
                         
                     </div>
