@@ -19,8 +19,8 @@
     <div class="container-fluid">
         <!-- This is to do left -->
         <div class="row">
-            <div class="col-md-2 function-bar">
-                <div class="input-group">
+            <div class="col-md-2 function-bar overflow-auto fixHeight">
+                <div class="input-group leftColSearch">
                     <input type="text" class="form-control" aria-label="Text input with dropdown button">
                     <div class="input-group-append">
                       <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
@@ -31,34 +31,39 @@
                       </div>
                     </div>
                 </div>
-                  <div class="row">
+                  <div class="row projectListName">
                       <h3>Project List</h3>
                       <button type="button" class="btn"><i class="fa-solid fa-circle-plus"></i></button>
                   </div>
+                  <!-- Project-list Item -->
                   <div class="project-list">
                     <ul class="list-group-flush ">
-                        <li class="list-group-item">Cras justo odio<i class="fa-solid fa-star"><i class="fa-solid fa-circle-minus"></i></i></li>
-                        <li class="list-group-item">Dapibus ac facilisis in<i class="fa-regular fa-star"><i class="fa-solid fa-circle-minus"></i></i></li>
-                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item d-flex">Cras justo odio
+                            <button class="btn"><i class="fa-solid fa-star"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button></li>
+                        <li class="list-group-item">Dapibus ac facilisis in
+                            <button class="btn"><i class="fa-regular fa-star"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button></li>
                       </ul>
                   </div>
             </div>
             <div class="col-md-10">
                 <!-- This is nav bar -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="col-md-12 paddingZero ">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                             <!-- Company Name & Icon -->
-                            <a class="navbar-brand" href="#">Navbar</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
+                            <a class="navbar-brand" href="#">
+                                <i class="fa-solid fa-user-graduate fa-2xl"></i>To-Do-List</a>
                             <!-- The right nav bar items -->
                               <form class="form-inline my-2 my-lg-0 d-flex ml-auto">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">New Project</button>
-                                <button class="btn  my-2 my-sm-0" type="submit" ><i class="fa-solid fa-user"></i></button>
-                                <button class="btn  my-2 my-sm-0" type="submit"><i class="fa-solid fa-bell"></i></button>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <span><i class="fa-solid fa-plus "></i></span></i>New Project</button>
+                                <!-- user button -->
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-user fa-xl"></i></button>
+                                <!-- alarm button -->
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-bell fa-xl"></i></button>
                               </form>
                           </nav>
                     </div>
@@ -67,37 +72,49 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Project Name</h1>
-                        <div class="d-flex justify-content-around">
-                            <button type="button" class="btn btn-primary">To Do</button>
-                            <button type="button" class="btn btn-primary">Doning</button>
-                            <button type="button" class="btn btn-primary">Done</button>
+                        <!-- The Todo doing done button -->
+                        <div class="row d-flex">
+                            <!-- to do btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg todobtn d-flex center ">To Do</button>
+                            </div>
+                            <!-- doing btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg doingbtn center">Doning</button>
+                            </div>
+                            <!-- done btn -->
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg donebtn center">Done</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- This is Task -->
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <form class="border border-dark">
                             <div class="d-flex justify-content-between">
                                 <label class="d-flex " for="taskName">Task Name</label><br>
                                 <label for="endDate">End Date</label><br>
                                 <label for="priority">Priority</label><br>
-                                <label for="assigness">assigness</label><br>
+                                <label for="assigness">Assigness</label><br>
                                 <label for="more">More</label><br>
                                 <label for="status">Status</label><br>
                             </div>
-                            <div class="d-flex ">
+                            <div class="d-flex overflow-auto">
                                 <!-- Task content -->
-                                <input class="mr-auto" type="text" id="Task" name="Task Name"><br>
+                                <input class="mr-auto" type="text" id="task" name="taskName"><br>
                                 <!-- Date -->
                                 <input type="date" class="form-control" id="date" name="date"><br>
                                 <!-- Priority button-->
-                                    <select class="form-select" aria-label="Priority">
-                                        <option selected>Priority</option>
-                                        <option value="1">High</option>
-                                        <option value="2">Medium</option>
-                                        <option value="3">Low</option>  
+                                    <select class="form-control selectpicker" aria-label="Priority">
+                                        <option selected >Priority</option>
+                                        <option value="1" >High</option>
+                                        <option value="2" >Medium</option>
+                                        <option value="3" >Low</option>  
                                       </select>
+                                <!-- assigness -->
+                                <button class="btn"><i class="fa-solid fa-users"></i></button>
                                 <!-- more button -->
                                 <div>
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="more" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,8 +125,8 @@
                                         <a class="dropdown-item" href="#">Delet</a>
                                     </div>
                                 </div>
-                                  <!-- status button -->
-                                  <select class="form-select" aria-label="">
+                                <!-- status button -->
+                                  <select class="form-select" aria-label="status">
                                     <option selected>Status</option>
                                     <option value="1">To Do</option>
                                     <option value="2">Doing</option>
@@ -119,7 +136,7 @@
                         </form>
                         <!-- Add task button -->
                         <div class="d-flex flex-row-reverse">
-                        <button type="button" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
                         </div>
                     </div>
                 </div>
