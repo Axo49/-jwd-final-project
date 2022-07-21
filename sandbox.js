@@ -1,17 +1,48 @@
 const filterButton = document.querySelector(".filterButt");
-const changeValue = document.querySelector(".changeVal");
-const diffValue = document.querySelector(".diffValue");
+const changeValue = document.querySelectorAll(".changeVal");
+const diffVal = document.querySelectorAll(".diffValue");
+const cleanBtn = document.querySelector(".clearButton");
+const statusArr = Array.from(diffVal);
 
-changeValue.addEventListener("click", (e) => {
-  if (e.target.innerText.toLowerCase() === "todo") {
-    diffValue.innerText = "todo";
-  } else if (e.target.innerText.toLowerCase() === "doing") {
-    diffValue.innerText = "doing";
-  } else if (e.target.innerText.toLowerCase() === "done") {
-    diffValue.innerText = "done";
-  }
+changeValue.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    console.log(e.target.innerText.toLowerCase());
+    if (e.target.innerText.toLowerCase() === "todo") {
+      item.firstElementChild.innerText = "ToDo";
+    } else if (e.target.innerText.toLowerCase() === "doing") {
+      item.firstElementChild.innerText = "Doing";
+    } else if (e.target.innerText.toLowerCase() === "done") {
+      item.firstElementChild.innerText = "Done";
+    }
+  });
 });
 
+filterButton.addEventListener("click", (e) => {
+  cleanBtn.classList.remove("showStatus");
+  const notMatchArr = statusArr.filter((item) => {
+    if (item.innerText.toLowerCase() !== e.target.innerText.toLowerCase()) {
+      return item;
+    }
+  });
+  const MatchArr = statusArr.filter((item) => {
+    if (item.innerText.toLowerCase() === e.target.innerText.toLowerCase()) {
+      return item;
+    }
+  });
+  notMatchArr.forEach((index) => {
+    index.parentElement.parentElement.classList.add("showStatus");
+  });
+  MatchArr.forEach((value) => {
+    value.parentElement.parentElement.classList.remove("showStatus");
+  });
+});
+
+cleanBtn.addEventListener("click", (e) => {
+  e.target.classList.add("showStatus");
+  statusArr.forEach((value) => {
+    value.parentElement.parentElement.classList.remove("showStatus");
+  });
+});
 /* console.log(statusValue);
 filterButton.addEventListener("click", (e) => {
   const notMatchArr = statusValue.filter((item) => {
@@ -43,22 +74,3 @@ filterButton.addEventListener("click", (e) => {
   });
   console.log(notMatchArr, MatchArr[0].innerText, MatchArr[1].innerText);
 }); */
-
-/*   for (let i = 0; i < statusValue.length; i++) {
-    console.log(e.target.innerText.toLowerCase(), statusValue[i].value);
-    if (
-      e.target.innerText.toLowerCase() !== statusValue[i].value.toLowerCase()
-    ) {
-      statusValue[i].parentElement.parentElement.setAttribute(
-        "style",
-        "display:none !important"
-      );
-      break;
-    } else if (
-      e.target.innerText.toLowerCase() === statusValue[i].value.toLowerCase()
-    ) {
-      statusValue[i].parentElement.parentElement.removeAttribute("style");
-      break;
-    }
-  } 
-*/
