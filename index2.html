@@ -25,8 +25,9 @@
                 <div class="input-group leftColSearch">
                     <input type="text" class="form-control" aria-label="Text input with dropdown button">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                        <button class="btn btn-outline-secondary dropdown-toggle bg-secondary" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class="fa-solid fa-bars text-dark"></i></button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
@@ -35,19 +36,21 @@
                     </div>
                 </div>
                 <div class="row projectListName">
-                    <h3>Project List</h3>
-                    <button type="button" class="btn"><i class="fa-solid fa-circle-plus"></i></button>
+                    <h3 class="text-light">Project List</h3>
+                    <button type="button" class="btn"><i class="fa-solid fa-circle-plus text-light"></i></button>
                 </div>
                 <!-- Project-list Item -->
                 <div class="project-list">
-                    <ul class="list-group-flush ">
-                        <li class="list-group-item d-flex">Working
-                            <button class="btn"><i class="fa-solid fa-star"></i></button>
-                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button>
+                    <ul class="list-group-flush">
+                        <li class="d-flex">
+                            <div class="align-self-center text-light" style="width: 80px;">Working</div>
+                            <button class="btn"><i class="fa-solid fa-star text-light"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus text-light"></i></button>
                         </li>
-                        <li class="list-group-item">School
-                            <button class="btn"><i class="fa-regular fa-star"></i></button>
-                            <button class="btn"><i class="fa-solid fa-circle-minus"></i></button>
+                        <li class="d-flex">
+                            <div class="align-self-center text-light" style="width: 80px;">School</div>
+                            <button class="btn"><i class="fa-regular fa-star text-light"></i></button>
+                            <button class="btn"><i class="fa-solid fa-circle-minus text-light"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -59,147 +62,197 @@
                         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                             <!-- Company Name & Icon -->
                             <a class="navbar-brand" href="#">
-                                <i class="fa-solid fa-user-graduate fa-2xl"></i>To-Do-List</a>
+                                <i class="fa-solid fa-user-graduate fa-2xl text-light"></i>To-Do-List</a>
                             <!-- The right nav bar items -->
                             <form class="form-inline my-2 my-lg-0 d-flex ml-auto">
                                 <!-- search  -->
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search"
                                     aria-label="search">
                                 <!-- add new project button -->
-                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-                                    <span><i class="fa-solid fa-plus "></i></span></i>New Project</button>
+                                <button class="btn btn-primary my-2 my-sm-0 mx-3" type="submit">
+                                    <span><i class="fa-solid fa-plus pr-2"></i></span></i>New Project</button>
                                 <!-- user button -->
                                 <button class="btn my-2 my-sm-0" type="submit"><i
-                                        class="fa-solid fa-user fa-xl"></i></button>
+                                        class="fa-solid fa-user fa-xl text-light"></i></button>
                                 <!-- alarm button -->
                                 <button class="btn my-2 my-sm-0" type="submit"><i
-                                        class="fa-solid fa-bell fa-xl"></i></button>
+                                        class="fa-solid fa-bell fa-xl text-light"></i></button>
                             </form>
                         </nav>
                     </div>
                 </div>
                 <!-- This is pj name -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Project Name</h1>
-                        <i class="fa-solid fa-xmark showStatus clearButton"></i>
-                        <!-- The Todo doing done button -->
-                        <div class="row d-flex filterButt">
-                            <!-- to do btn -->
-                            <div class="col-md-4 d-flex justify-content-center">
-                                <button type="button" class="btn btn-lg todobtn d-flex center">ToDo</button>
-                            </div>
-                            <!-- doing btn -->
-                            <div class="col-md-4 d-flex justify-content-center">
-                                <button type="button" class="btn btn-lg doingbtn center">Doing</button>
-                            </div>
-                            <!-- done btn -->
-                            <div class="col-md-4 d-flex justify-content-center">
-                                <button type="button" class="btn btn-lg donebtn center">Done</button>
-                            </div>
+                <div class="main">
+                    <h1 class="p-4">Project Name</h1>
+                    <!-- The Todo doing done button -->
+                    <div class="d-flex">
+                        <!-- to do btn -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <button type="button"
+                                class=" btn btn-lg todobtn d-flex center text-light font-weight-bold">To
+                                Do</button>
+                        </div>
+                        <!-- doing btn -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <button type="button"
+                                class=" btn btn-lg doingbtn center text-light font-weight-bold">Doning</button>
+                        </div>
+                        <!-- done btn -->
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <button type="button"
+                                class=" btn btn-lg donebtn center text-light font-weight-bold">Done</button>
                         </div>
                     </div>
                 </div>
                 <!-- This is Task -->
                 <div class="row">
                     <div class="col-md-12 ">
-                        <form class="border border-dark">
-                            <div class="d-flex justify-content-between">
-                                <label class="d-flex " for="taskName">Task Name</label><br>
-                                <label for="endDate">End Date</label><br>
-                                <label for="priority">Priority</label><br>
-                                <label for="assigness">Assigness</label><br>
-                                <label for="more">More</label><br>
-                                <label for="status">Status</label><br>
-                            </div>
-                            <div class="d-flex overflow-auto">
-                                <!-- Task content -->
-                                <input class="mr-auto" type="text" id="task" name="taskName"><br>
-                                <!-- Date -->
-                                <input type="date" class="form-control" id="date" name="date"><br>
-                                <!-- Priority button-->
-                                <select class="form-control selectpicker" aria-label="Priority">
-                                    <option selected>Priority</option>
-                                    <option value="1">High</option>
-                                    <option value="2">Medium</option>
-                                    <option value="3">Low</option>
-                                </select>
-                                <!-- assigness -->
-                                <button class="btn"><i class="fa-solid fa-users fa-2xl"></i></button>
-                                <!-- more button -->
-                                <div>
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="more"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        More
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="more">
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <a class="dropdown-item" href="#">Delete</a>
-                                    </div>
+                        <form class="border border-dark border-0 px-3 pt-2" id="taskList">
+                            <div class="d-flex">
+                                <div class="col-md-3">
+                                    <label class="d-flex " for="taskName">Task Name</label>
                                 </div>
-                                <!-- status button -->
-                                <div class=" changeVal">
-                                    <button class="btn btn-secondary dropdown-toggle diffValue" type="button" id="status"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
-                                    <div class="dropdown-menu" aria-labelledby="status">
-                                        <a class="dropdown-item" href="#">ToDo</a>
-                                        <a class="dropdown-item" href="#">Doing</a>
-                                        <a class="dropdown-item" href="#">Done</a>
-                                    </div>
+
+                                <div class="col-md-2">
+                                    <label for="endDate">End Date</label>
+                                </div>
+
+                                <div class="col-md-1">
+                                    <label for="priority">Priority</label>
+                                </div>
+
+                                <div class="col-md-1 mx-4">
+                                    <label for="assigness">Assigness</label>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="edit">Edit</label>
+                                </div>
+
+                                <div class="col-md-1">
+                                    <label for="delete">Delete</label>
+                                </div>
+
+                                <div class="col-md-1">
+                                    <label for="status">Status</label>
                                 </div>
                             </div>
-                            <div class="d-flex overflow-auto">
-                                <!-- Task content -->
-                                <input class="mr-auto" type="text" id="task" name="taskName"><br>
-                                <!-- Date -->
-                                <input type="date" class="form-control" id="date" name="date"><br>
-                                <!-- Priority button-->
-                                <select class="form-control selectpicker" aria-label="Priority">
-                                    <option selected>Priority</option>
-                                    <option value="1">High</option>
-                                    <option value="2">Medium</option>
-                                    <option value="3">Low</option>
-                                </select>
-                                <!-- assigness -->
-                                <button class="btn"><i class="fa-solid fa-users fa-2xl"></i></button>
-                                <!-- more button -->
-                                <div>
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="more"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        More
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="more">
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <a class="dropdown-item" href="#">Delete</a>
+
+                            <div class="overflow-auto">
+                                <!-- Task Item -->
+                                <div class="taskItem d-flex py-2 mb-1" style="background-color: #ec77ab;">
+                                    <!-- Task Name -->
+                                    <div class="col-md-3">
+                                        <input class="mr-auto form-control taskName" placeholder="Task Name" type="text"
+                                            name="taskName" disabled>
+                                    </div>
+                                    <!-- Date -->
+                                    <div class="col-md-2">
+                                        <input type="date" class="form-control endDate" name="date" disabled>
+                                    </div>
+                                    <!-- Priority button-->
+                                    <div class="col-md-1 input-group priority">
+                                        <select name="custom-select" disabled>
+                                            <option selected>Priority</option>
+                                            <option value="high">High</option>
+                                            <option value="middle">Middle</option>
+                                            <option value="low">Low</option>
+                                        </select>
+                                    </div>
+                                    <!-- assigness -->
+                                    <div class="col-md-1 mx-4">
+                                        <button class="btn assigness"><i class="fa-solid fa-users fa-2xl"></i></button>
+                                    </div>
+                                    <!-- edit button -->
+                                    <div class="col-md-2">
+                                        <button class="btn btn-primary edit">Edit</button>
+                                        <button class="btn"><i class="fa fa-save fa-2xl save"></i></button>
+                                        <button class="btn"><i class="fa fa-remove fa-2xl cancel"></i></button>
+                                    </div>
+                                    <!-- delete button -->
+                                    <div class="col-md-1">
+                                        <button class="btn delete" id="delete-1"><i
+                                                class="fa fa-trash fa-2xl"></i></button>
+                                    </div>
+                                    <!-- status button -->
+                                    <div class="col-md-1">
+                                        <button class="btn btn-secondary dropdown-toggle" role="button" id="status-1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="status-1">
+                                            <a class="dropdown-item" href="#">ToDo</a>
+                                            <a class="dropdown-item" href="#">Doing</a>
+                                            <a class="dropdown-item" href="#">Done</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- status button -->
-                                <div class=" changeVal">
-                                    <button class="btn btn-secondary dropdown-toggle diffValue" type="button" id="status"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
-                                    <div class="dropdown-menu" aria-labelledby="status">
-                                        <a class="dropdown-item" href="#">ToDo</a>
-                                        <a class="dropdown-item" href="#">Doing</a>
-                                        <a class="dropdown-item" href="#">Done</a>
+
+                                <!-- Task generator -->
+                                <div class="taskItem d-flex py-2 mb-1">
+                                    <!-- Task Name -->
+                                    <div class="col-md-3">
+                                        <input class="mr-auto form-control" placeholder="Task Name" type="text"
+                                            id="task" name="taskName">
+                                    </div>
+                                    <!-- Date -->
+                                    <div class="col-md-2">
+                                        <input type="date" class="form-control" id="date" name="date">
+                                    </div>
+                                    <!-- Priority button-->
+                                    <div class="col-md-1 input-group">
+                                        <select name="custom-select" id="priority">
+                                            <option selected>Priority</option>
+                                            <option value="high">High</option>
+                                            <option value="middle">Middle</option>
+                                            <option value="low">Low</option>
+                                        </select>
+                                    </div>
+                                    <!-- assigness -->
+                                    <div class="col-md-1 mx-4">
+                                        <button class="btn" id="assigness"><i
+                                                class="fa-solid fa-users fa-2xl"></i></button>
+                                    </div>
+                                    <!-- edit button -->
+                                    <div class="col-md-2">
+                                        <button class="btn btn-primary" id="edit" disabled>Edit</button>
+                                    </div>
+                                    <!-- delete button -->
+                                    <div class="col-md-1">
+                                        <button class="btn" id="delete" disabled><i
+                                                class="fa fa-trash fa-2xl"></i></button>
+                                    </div>
+                                    <!-- status button -->
+                                    <div class="col-md-1">
+                                        <button class="btn btn-secondary dropdown-toggle diffValue" type="button"
+                                            id="status" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" disabled>
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="status">
+                                            <a class="dropdown-item" href="#">ToDo</a>
+                                            <a class="dropdown-item" href="#">Doing</a>
+                                            <a class="dropdown-item" href="#">Done</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                            
+                                <!-- End Task generator -->
+                            </div>
+
+                            <!-- Add task button -->
+                            <div class="d-flex flex-row-reverse">
+                                <button type="button" class="btn p-3" id="addTask-btn"><i
+                                        class="fa-solid fa-circle-plus fa-2xl"></i></button>
+                            </div>
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
-            </form>
-            <!-- Add task button -->
-         <div class="d-flex flex-row-reverse">
-            <button type="button" class="btn"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
         </div>
-        </div>
-    </div>
-    </div>
-    </div>
     </div>
     <script src="sandbox.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
