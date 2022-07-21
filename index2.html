@@ -84,18 +84,18 @@
                 <!-- This is pj name -->
                 <div class="main">
                     <h1 class="p-4">Project Name</h1>
+                    <i class="fa-solid fa-xmark showStatus clearButton"></i>
                     <!-- The Todo doing done button -->
-                    <div class="d-flex">
+                    <div class="d-flex filterButt">
                         <!-- to do btn -->
                         <div class="col-md-4 d-flex justify-content-center">
                             <button type="button"
-                                class=" btn btn-lg todobtn d-flex center text-light font-weight-bold">To
-                                Do</button>
+                                class=" btn btn-lg todobtn d-flex center text-light font-weight-bold">ToDo</button>
                         </div>
                         <!-- doing btn -->
                         <div class="col-md-4 d-flex justify-content-center">
                             <button type="button"
-                                class=" btn btn-lg doingbtn center text-light font-weight-bold">Doning</button>
+                                class=" btn btn-lg doingbtn center text-light font-weight-bold">Doing</button>
                         </div>
                         <!-- done btn -->
                         <div class="col-md-4 d-flex justify-content-center">
@@ -175,11 +175,9 @@
                                                 class="fa fa-trash fa-2xl"></i></button>
                                     </div>
                                     <!-- status button -->
-                                    <div class="col-md-1">
-                                        <button class="btn btn-secondary dropdown-toggle" role="button" id="status-1"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Status
-                                        </button>
+                                    <div class="col-md-1 changeVal">
+                                        <button class="btn btn-secondary dropdown-toggle diffValue" role="button" id="status-1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
                                         <div class="dropdown-menu" aria-labelledby="status-1">
                                             <a class="dropdown-item" href="#">ToDo</a>
                                             <a class="dropdown-item" href="#">Doing</a>
@@ -189,19 +187,19 @@
                                 </div>
 
                                 <!-- Task generator -->
-                                <div class="taskItem d-flex py-2 mb-1">
+                                <div class="taskItem d-flex py-2 mb-1" style="background-color: #ec77ab;">
                                     <!-- Task Name -->
                                     <div class="col-md-3">
-                                        <input class="mr-auto form-control" placeholder="Task Name" type="text"
-                                            id="task" name="taskName">
+                                        <input class="mr-auto form-control taskName" placeholder="Task Name" type="text"
+                                            name="taskName" disabled>
                                     </div>
                                     <!-- Date -->
                                     <div class="col-md-2">
-                                        <input type="date" class="form-control" id="date" name="date">
+                                        <input type="date" class="form-control endDate" name="date" disabled>
                                     </div>
                                     <!-- Priority button-->
-                                    <div class="col-md-1 input-group">
-                                        <select name="custom-select" id="priority">
+                                    <div class="col-md-1 input-group priority">
+                                        <select name="custom-select" disabled>
                                             <option selected>Priority</option>
                                             <option value="high">High</option>
                                             <option value="middle">Middle</option>
@@ -210,26 +208,24 @@
                                     </div>
                                     <!-- assigness -->
                                     <div class="col-md-1 mx-4">
-                                        <button class="btn" id="assigness"><i
-                                                class="fa-solid fa-users fa-2xl"></i></button>
+                                        <button class="btn assigness"><i class="fa-solid fa-users fa-2xl"></i></button>
                                     </div>
                                     <!-- edit button -->
                                     <div class="col-md-2">
-                                        <button class="btn btn-primary" id="edit" disabled>Edit</button>
+                                        <button class="btn btn-primary edit">Edit</button>
+                                        <button class="btn"><i class="fa fa-save fa-2xl save"></i></button>
+                                        <button class="btn"><i class="fa fa-remove fa-2xl cancel"></i></button>
                                     </div>
                                     <!-- delete button -->
                                     <div class="col-md-1">
-                                        <button class="btn" id="delete" disabled><i
+                                        <button class="btn delete" id="delete-1"><i
                                                 class="fa fa-trash fa-2xl"></i></button>
                                     </div>
                                     <!-- status button -->
-                                    <div class="col-md-1">
-                                        <button class="btn btn-secondary dropdown-toggle diffValue" type="button"
-                                            id="status" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" disabled>
-                                            Status
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="status">
+                                    <div class="col-md-1 changeVal">
+                                        <button class="btn btn-secondary dropdown-toggle diffValue" role="button" id="status-1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ToDo</button>
+                                        <div class="dropdown-menu" aria-labelledby="status-1">
                                             <a class="dropdown-item" href="#">ToDo</a>
                                             <a class="dropdown-item" href="#">Doing</a>
                                             <a class="dropdown-item" href="#">Done</a>

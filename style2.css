@@ -1,6 +1,6 @@
 body {
-    font-family: 'Edu TAS Beginner', cursive;
-    background-color: #f7f6f6;
+  font-family: "Edu TAS Beginner", cursive;
+  background-color: #f7f6f6;
 }
 
 .function-bar {
@@ -74,26 +74,30 @@ body {
 }
 
 .projectListName {
-    padding: 20px 15px 0 !important;
+  padding: 20px 15px 0 !important;
 }
 
 .project-list .list-group-flush {
-    padding: 15px !important;
+  padding: 15px !important;
 }
 
 #taskList {
-    border-radius: 10px;
-    background-color: #fff;
-    min-height: 100px;
-    max-height: 50hv;
+  border-radius: 10px;
+  background-color: #fff;
+  min-height: 100px;
+  max-height: 50hv;
 }
 
 .taskItem {
-    background-color: #929292;
-    border-radius: 4px;
+  background-color: #929292;
+  border-radius: 4px;
 }
 
 .save,
 .cancel {
-    display: none;
+  display: none;
+}
+
+.showStatus {
+  display: none !important;
 }

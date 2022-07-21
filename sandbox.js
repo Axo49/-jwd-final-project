@@ -2,6 +2,7 @@ const filterButton = document.querySelector(".filterButt");
 const changeValue = document.querySelectorAll(".changeVal");
 const diffVal = document.querySelectorAll(".diffValue");
 const cleanBtn = document.querySelector(".clearButton");
+const delBtn = document.querySelectorAll(".delete");
 const statusArr = Array.from(diffVal);
 
 changeValue.forEach((item) => {
@@ -43,6 +44,7 @@ cleanBtn.addEventListener("click", (e) => {
     value.parentElement.parentElement.classList.remove("showStatus");
   });
 });
+
 /* console.log(statusValue);
 filterButton.addEventListener("click", (e) => {
   const notMatchArr = statusValue.filter((item) => {
