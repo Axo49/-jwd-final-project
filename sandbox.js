@@ -3,6 +3,7 @@ const changeValue = document.querySelectorAll(".changeVal");
 const diffVal = document.querySelectorAll(".diffValue");
 const cleanBtn = document.querySelector(".clearButton");
 const delBtn = document.querySelectorAll(".delete");
+const checkStatus = document.querySelector(".idenifier");
 const statusArr = Array.from(diffVal);
 
 changeValue.forEach((item) => {
@@ -10,10 +11,37 @@ changeValue.forEach((item) => {
     console.log(e.target.innerText.toLowerCase());
     if (e.target.innerText.toLowerCase() === "todo") {
       item.firstElementChild.innerText = "ToDo";
+      if (checkStatus.innerText === "") {
+        console.log("good");
+      } else if (
+        e.target.innerText.toLowerCase() !== checkStatus.innerText.toLowerCase()
+      ) {
+        e.target.parentElement.parentElement.parentElement.classList.add(
+          "showStatus"
+        );
+      }
     } else if (e.target.innerText.toLowerCase() === "doing") {
       item.firstElementChild.innerText = "Doing";
+      if (checkStatus.innerText === "") {
+        console.log("good");
+      } else if (
+        e.target.innerText.toLowerCase() !== checkStatus.innerText.toLowerCase()
+      ) {
+        e.target.parentElement.parentElement.parentElement.classList.add(
+          "showStatus"
+        );
+      }
     } else if (e.target.innerText.toLowerCase() === "done") {
       item.firstElementChild.innerText = "Done";
+      if (checkStatus.innerText === "") {
+        console.log("good");
+      } else if (
+        e.target.innerText.toLowerCase() !== checkStatus.innerText.toLowerCase()
+      ) {
+        e.target.parentElement.parentElement.parentElement.classList.add(
+          "showStatus"
+        );
+      }
     }
   });
 });
@@ -36,12 +64,20 @@ filterButton.addEventListener("click", (e) => {
   MatchArr.forEach((value) => {
     value.parentElement.parentElement.classList.remove("showStatus");
   });
+  checkStatus.innerText = e.target.innerText;
 });
 
 cleanBtn.addEventListener("click", (e) => {
   e.target.classList.add("showStatus");
+  checkStatus.innerText = "";
   statusArr.forEach((value) => {
     value.parentElement.parentElement.classList.remove("showStatus");
+  });
+});
+
+delBtn.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.target.parentElement.parentElement.parentElement.remove();
   });
 });
 
