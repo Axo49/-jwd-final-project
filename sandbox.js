@@ -11,6 +11,8 @@ changeValue.forEach((item) => {
     console.log(e.target.innerText.toLowerCase());
     if (e.target.innerText.toLowerCase() === "todo") {
       item.firstElementChild.innerText = "ToDo";
+      e.target.parentElement.parentElement.parentElement.style.backgroundColor =
+        "#ec77ab";
       if (checkStatus.innerText === "") {
         console.log("good");
       } else if (
@@ -22,6 +24,8 @@ changeValue.forEach((item) => {
       }
     } else if (e.target.innerText.toLowerCase() === "doing") {
       item.firstElementChild.innerText = "Doing";
+      e.target.parentElement.parentElement.parentElement.style.backgroundColor =
+        "#9b6ecb";
       if (checkStatus.innerText === "") {
         console.log("good");
       } else if (
@@ -33,6 +37,8 @@ changeValue.forEach((item) => {
       }
     } else if (e.target.innerText.toLowerCase() === "done") {
       item.firstElementChild.innerText = "Done";
+      e.target.parentElement.parentElement.parentElement.style.backgroundColor =
+        "#7873f5";
       if (checkStatus.innerText === "") {
         console.log("good");
       } else if (
